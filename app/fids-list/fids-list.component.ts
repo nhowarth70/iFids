@@ -5,7 +5,8 @@
 import {Component} from "@angular/core";
 
 @Component({
-    templateUrl: './app/fids-list/fids-list.html',
+    moduleId: module.id,
+    templateUrl: 'fids-list.html',
     selector: 'fids-list'
 })
 
