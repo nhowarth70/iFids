@@ -1,0 +1,44 @@
+{
+  "name": "ng2-fundamentals-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhowarth70/iFids.git"
+  },
+  "author": "Nick Howarth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhowarth70/iFids/issues"
+  },
+  "homepage": "https://github.com/nhowarth70/iFids#readme",
+  "dependencies": {
+    "@angular/common": "4.0.0",
+    "@angular/compiler": "4.0.0",
+    "@angular/core": "4.0.0",
+    "@angular/forms": "4.0.0",
+    "@angular/http": "4.0.0",
+    "@angular/platform-browser": "4.0.0",
+    "@angular/platform-browser-dynamic": "4.0.0",
+    "@angular/router": "4.0.0",
+    "systemjs": "0.19.40",
+    "core-js": "2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "0.8.4",
+    "ng2f-bootstrap": "^0.0.4",
+    "ng2f-server": "^0.2.3"
+  },
+  "devDependencies": {
+    "@types/core-js": "0.9.34",
+    "@types/node": "6.0.46",
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.3.0",
+    "typescript": "2.1.1"
+  },
+  "repository": {}
+}
