@@ -3,6 +3,8 @@
  */
 
 import {Component} from "@angular/core";
+import {FidsInfoService} from "./fids-info.service";
+import {FlightRecord} from "../shared/model/FlightRecord";
 
 @Component({
     moduleId: module.id,
@@ -11,6 +13,17 @@ import {Component} from "@angular/core";
 })
 
 export class FidsListComponent {
-    flights = [{"flightNumber": "999", "city": "London", "airlineCode": "EZY", "scheduled": "14:00", "gate": "D4","airline":"EasyJet","statusText":"Departed"},
-        {"flightNumber": "122", "city": "New York", "airlineCode": "BA", "scheduled": "15:00", "gate": "A1","airline":"British Airways","statusText":"On Time"}]
+    flightRecords: FlightRecord[];
+    errorMessage: string;
+
+    constructor(private fidsInfoService: FidsInfoService){
+
+    }
+
+    ngOnInit(): void {
+        this.fidsInfoService.getAll()
+            .subscribe(flightRecords => this.flightRecords = flightRecords,
+                error => this.errorMessage = <any>error);
+    }
+
 }

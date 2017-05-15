@@ -14,8 +14,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor='let flight of flights'>
-                      <fids-entry [entry]="flight"></fids-entry>
+                <tr *ngFor='let flight of flightRecords'>
+                    <td>{{flight.airlineCode}}{{flight.flightNumber}}</td>
+                    <td>{{flight.city}}</td>
+                    <td>{{flight.airline}}</td>
+                    <td>{{flight.scheduled}}</td>
+                    <td>{{flight.gate}}</td>
+                    <td>{{flight.statusText}}</td>
                 </tr>
                 </tbody>
             </table>

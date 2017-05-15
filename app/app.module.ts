@@ -3,11 +3,13 @@ import {BrowserModule} from '@angular/platform-browser'
 
 import {AppComponent} from "./app.component";
 import {FidsListComponent} from "./fids-list/fids-list.component";
-import {FidsEntryComponent} from "./fids-list/fids-entry/fids-entry.component";
+import {FidsInfoService} from "./fids-list/fids-info.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
-    imports: [BrowserModule],
+    imports: [BrowserModule,HttpModule],
     bootstrap : [AppComponent],
-    declarations: [AppComponent,FidsListComponent,FidsEntryComponent]
+    declarations: [AppComponent,FidsListComponent],
+    providers: [FidsInfoService]
 })
 export class AppModule{}
