@@ -6,13 +6,12 @@ import {FlightRecord} from "../shared/model/FlightRecord";
 @Injectable()
 export class FidsInfoService {
     readonly url : string = "https://flightnodeservice-azoideftms.now.sh/flights"
-    constructor(private http : Http){
+    constructor(private _http : Http){
     }
 
     getAll(): Observable<FlightRecord[]>{
-        return this.http.get(this.url)
+        return this._http.get(this.url)
             .map((response: Response) => <FlightRecord[]> response.json())
-            .do(data => console.log('All: ' +  JSON.stringify(data)))
             .catch(this.handleError);
     }
 
